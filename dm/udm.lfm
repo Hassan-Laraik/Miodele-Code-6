@@ -1,0 +1,42 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 326
+  HorizontalOffset = 343
+  VerticalOffset = 183
+  Width = 679
+  object ZCNXcole: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'Ecole'
+    User = 'root'
+    Password = '12345678'
+    Protocol = 'mysql-5'
+    Left = 128
+    Top = 56
+  end
+  object ZtblFormateur: TZTable
+    Connection = ZCNXcole
+    Active = True
+    TableName = '`Formateurs`'
+    Left = 128
+    Top = 144
+  end
+  object DSFormateur: TDataSource
+    DataSet = ZtblFormateur
+    Left = 128
+    Top = 208
+  end
+  object ZQryHelp: TZQuery
+    Connection = ZCNXcole
+    Params = <>
+    Left = 565
+    Top = 64
+  end
+end

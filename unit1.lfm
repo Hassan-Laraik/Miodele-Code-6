@@ -1,0 +1,238 @@
+object Form1: TForm1
+  Left = 244
+  Height = 453
+  Top = 161
+  Width = 1127
+  Caption = 'Form1'
+  ClientHeight = 453
+  ClientWidth = 1127
+  DesignTimePPI = 81
+  LCLVersion = '3.0.0.1'
+  object Label1: TLabel
+    Left = 34
+    Height = 16
+    Top = 41
+    Width = 93
+    Caption = 'Cin_Formateur'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 35
+    Height = 16
+    Top = 75
+    Width = 30
+    Caption = 'Nom'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 16
+    Top = 110
+    Width = 28
+    Caption = 'GSM'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 30
+    Height = 16
+    Top = 175
+    Width = 50
+    Caption = 'Adresse'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 25
+    Height = 16
+    Top = 275
+    Width = 61
+    Caption = 'Specialite'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 34
+    Height = 16
+    Top = 320
+    Width = 54
+    Caption = 'Diplome'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 410
+    Height = 16
+    Top = 260
+    Width = 62
+    Caption = 'Naissance'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 420
+    Height = 16
+    Top = 20
+    Width = 37
+    Caption = 'Photo'
+    ParentColor = False
+  end
+  object DBEtCIN: TDBEdit
+    Left = 150
+    Height = 33
+    Top = 30
+    Width = 195
+    DataField = 'Cin_Formateur'
+    DataSource = DM.DSFormateur
+    MaxLength = 8
+    TabOrder = 0
+  end
+  object DBEdtNom: TDBEdit
+    Left = 147
+    Height = 33
+    Top = 76
+    Width = 198
+    DataField = 'Nom'
+    DataSource = DM.DSFormateur
+    MaxLength = 45
+    TabOrder = 1
+  end
+  object DBEdtPhone: TDBEdit
+    Left = 156
+    Height = 33
+    Top = 127
+    Width = 189
+    DataField = 'Gsm'
+    DataSource = DM.DSFormateur
+    MaxLength = 10
+    TabOrder = 2
+    OnKeyPress = DBEdtPhoneKeyPress
+  end
+  object DBMemo1: TDBMemo
+    Left = 163
+    Height = 76
+    Top = 168
+    Width = 187
+    DataField = 'Adresse'
+    DataSource = DM.DSFormateur
+    TabOrder = 3
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 169
+    Height = 33
+    Top = 261
+    Width = 176
+    DataField = 'Specialite'
+    DataSource = DM.DSFormateur
+    ItemHeight = 0
+    Items.Strings = (
+      'Informatique'
+      'Gestion'
+      'Maintenance'
+      'Digital'
+    )
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object DBEdit4: TDBEdit
+    Left = 170
+    Height = 33
+    Top = 310
+    Width = 163
+    DataField = 'Diplome'
+    DataSource = DM.DSFormateur
+    MaxLength = 45
+    TabOrder = 5
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 515
+    Height = 33
+    Top = 250
+    Width = 181
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 19
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 6
+    Text = '07/04/1969'
+    DataField = 'Naissance'
+    DataSource = DM.DSFormateur
+  end
+  object DBImage1: TDBImage
+    Left = 516
+    Height = 209
+    Top = 26
+    Width = 174
+    DataField = 'photo'
+    DataSource = DM.DSFormateur
+    Stretch = True
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 760
+    Height = 21
+    Top = 256
+    Width = 203
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 21
+    ClientWidth = 203
+    DataSource = DM.DSFormateur
+    Options = []
+    TabOrder = 7
+  end
+  object DBGrid1: TDBGrid
+    Left = 719
+    Height = 187
+    Top = 45
+    Width = 396
+    Color = clWindow
+    Columns = <>
+    DataSource = DM.DSFormateur
+    TabOrder = 8
+  end
+  object BtnNouveau: TButton
+    Left = 176
+    Height = 36
+    Top = 368
+    Width = 80
+    Caption = 'BtnNouveau'
+    OnClick = BtnNouveauClick
+    TabOrder = 9
+  end
+  object BtnModifier: TButton
+    Left = 296
+    Height = 36
+    Top = 368
+    Width = 80
+    Caption = 'BtnModifier'
+    OnClick = BtnModifierClick
+    TabOrder = 10
+  end
+  object BtnSuprimer: TButton
+    Left = 424
+    Height = 36
+    Top = 368
+    Width = 80
+    Caption = 'BtnSuprimer'
+    TabOrder = 11
+  end
+  object BtnAnnuler: TButton
+    Left = 536
+    Height = 36
+    Top = 368
+    Width = 80
+    Caption = 'BtnAnnuler'
+    OnClick = BtnAnnulerClick
+    TabOrder = 12
+  end
+  object BtValider: TButton
+    Left = 672
+    Height = 36
+    Top = 368
+    Width = 80
+    Caption = 'BtValider'
+    OnClick = BtValiderClick
+    TabOrder = 13
+  end
+end
